@@ -38,11 +38,11 @@ This section includes both the original raw dataset and the segmented or split d
 Contained in this division are three distinct Jupyter notebooks that perform different aspects of data analysis:
 
 ```
-- **dataModeling.ipynb**: This notebook is utilized for exploratory data analysis (EDA) and initial modeling of the data.
+- dataModeling.ipynb: This notebook is utilized for exploratory data analysis (EDA) and initial modeling of the data.
 
-- **algorithms.ipynb**: This notebook implements machine learning models such as Linear Regression (LR) and XGBoost.
+- algorithms.ipynb: This notebook implements machine learning models such as Linear Regression (LR) and XGBoost.
 
-- **algorithmsTuning.ipynb**: This notebook is focused on fine-tuning the hyperparameters of the models for optimal performance.
+- algorithmsTuning.ipynb: This notebook is focused on fine-tuning the hyperparameters of the models for optimal performance.
 
 ```
 
