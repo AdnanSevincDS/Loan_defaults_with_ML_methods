@@ -1,8 +1,46 @@
 #### This repository was established as a case study for a potential Junior/Middle DS position.
 #### This material may not be copied or published elsewhere (including Facebook and other social media) without the permission of the author!
 
+# Repository File Structure and Description 
 
-## Data Description & Preparation
+This repository contains the following key components:
+
+project-root
+│
+├── dataset
+│   ├── rawdata.csv                           # Raw Dataset
+│   ├── X_test.csv                            # Split Dataset for Testing Features
+│   ├── X_train.csv                           # Split Dataset for Training Features
+│   ├── y_test.csv                            # Split Dataset for Testing Labels
+│   └── y_train.csv                           # Split Dataset for Training Labels
+│
+└── notebooks
+    ├── dataModeling.ipyb                     # Notebook 1: Data Modeling
+    ├── algorithms.ipynb                      # Notebook 2: Algorithms
+    └── algorithmsTuning.ipynb                # Notebook 3: Algorithms Tuning
+
+## Dataset Directory 
+This section includes both the original raw dataset and the segmented or split data files. Here's what each file represents:
+
+- **rawdata.csv**: This original, unprocessed dataset.
+- **X_test.csv**
+- **X_train.csv**
+- **y_test.csv**
+- **y_train.csv**
+
+## Notebooks Directory
+Contained in this division are three distinct Jupyter notebooks that perform different aspects of data analysis:
+
+- **dataModeling.ipynb**: This notebook is utilized for exploratory data analysis (EDA) and initial modeling of the data.
+
+- **algorithms.ipynb**: This notebook implements machine learning models such as Linear Regression (LR) and XGBoost.
+
+- **algorithmsTuning.ipynb**: This notebook is focused on fine-tuning the hyperparameters of the models for optimal performance.
+
+Please navigate to each directory for a more detailed observation and understanding of how the project flows and functions.
+
+
+# Data Description & Preparation
 
 
 • Non-Default: The loan is deemed non-defaulted if its delinquency status is below
