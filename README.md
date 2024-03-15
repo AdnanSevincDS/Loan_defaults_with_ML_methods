@@ -5,16 +5,24 @@
 
 This study covers the use of machine learning methods in predicting default in mortgage loans.
 Lending institutions can leverage machine learning methods to handle loan applications and
-prevent losses from defaulted loans. This thesis assesses the predictive performance of various
+prevent losses from defaulted loans. This study assesses the predictive performance of various
 machine learning methods using the Freddie Mac Single-Family Loan-Level Dataset, focusing
-on loans that originated in 2006 and 2007. 
+on loans that originated in 2007. 
 
 We employed widely used machine learning methods, including logistic regression, decision tree, random forest and XGBoost to predict defaults in mortgage loans together with under-sampling technique implemented to alleviate the impact of the imbalanced dataset
 problem. 
 
 We found that the XGBoost method combined with the under-sampling technique yielded the highest AUC (Area under the ROC Curve) score. 
 
-The important variables in the prediction of default obtained with help of XGBoost please look at the featureImportance.ipynb
+| Model               | Without hyperparameter | with hyperparameter | Search for Hyperparameter                                                                             |
+|---------------------|------------------------|---------------------|-------------------------------------------------------------------------------------------------------|
+| Logistic Regression | 75.9007%               | 75.9007%            | c>[0.01, 0.1, 1, 10, 50] penalty>['none','l1','l2'] solver>['lbfgs', 'sag','saga','newton-cg']        |
+| Decision Tree       | 67.015%                | 73.551%             | criterion >['gini','entropy'] min_samples_split > [2,3,5,10] max_depth >[None,4, 5, 6, 8]             |
+| Random Forest       | 75.872%                | 75.958%             | n_estimators >[50,100, 200] max_depth >[None,4, 6, 8]                                                 |
+| XGBoost             | 76.040                 | 76.339%             | n_estimators>[50,100, 200] max_depth> [3, 6,10] learning_rate> [0.05,0.1,0.5] subsample > [0.5,0.7,1] |
+
+
+The important variables in the prediction of default obtained with help of XGBoost and we found that Credit Score and Original Interest rate are the most important variables for our model.
 
 # Repository File Structure and Description 
 
