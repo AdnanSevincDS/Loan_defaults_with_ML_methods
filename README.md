@@ -34,6 +34,7 @@ project-root
     ├── dataModeling.ipyb                     # Notebook 1: Data Modeling
     ├── algorithms.ipynb                      # Notebook 2: Algorithms
     └── algorithmsTuning.ipynb                # Notebook 3: Algorithms Tuning
+    └── featureImportance.ipynb               # Notebook 4: Feature Importance
 
 ```
 
