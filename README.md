@@ -25,11 +25,14 @@ project-root
 ## Dataset Directory 
 This section includes both the original raw dataset and the segmented or split data files. Here's what each file represents:
 
+```
 - **rawdata.csv**: This original, unprocessed dataset.
 - **X_test.csv**
 - **X_train.csv**
 - **y_test.csv**
 - **y_train.csv**
+
+```
 
 ## Notebooks Directory
 Contained in this division are three distinct Jupyter notebooks that perform different aspects of data analysis:
