@@ -60,6 +60,8 @@ Contained in this division are three distinct Jupyter notebooks that perform dif
 
 - algorithmsTuning.ipynb: This notebook is focused on fine-tuning the hyperparameters of the models for optimal performance.
 
+- featureImportance.ipynb: This notebook is utilized for feature importance derived from XGBoost
+
 ```
 
 Please navigate to each directory for a more detailed observation and understanding of how the project flows and functions.
