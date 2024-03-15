@@ -5,6 +5,7 @@
 
 This repository contains the following key components:
 
+```
 project-root
 │
 ├── dataset
@@ -18,6 +19,8 @@ project-root
     ├── dataModeling.ipyb                     # Notebook 1: Data Modeling
     ├── algorithms.ipynb                      # Notebook 2: Algorithms
     └── algorithmsTuning.ipynb                # Notebook 3: Algorithms Tuning
+
+```
 
 ## Dataset Directory 
 This section includes both the original raw dataset and the segmented or split data files. Here's what each file represents:
