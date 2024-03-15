@@ -1,5 +1,3 @@
-# A case Study DS
-
 #### This repository was established as a case study for a potential Junior/Middle DS position.
 #### This material may not be copied or published elsewhere (including Facebook and other social media) without the permission of the author!
 
@@ -9,6 +7,7 @@
 
 • Non-Default: The loan is deemed non-defaulted if its delinquency status is below
 90 days throughout the 24-month window
+
 • Default: The loan is deemed defaulted if its delinquency status at least once
 exceeds 90 days throughout the 24-month window.
 
