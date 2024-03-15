@@ -1,6 +1,21 @@
 #### This repository was established as a case study for a potential Junior/Middle DS position.
 #### This material may not be copied or published elsewhere (including Facebook and other social media) without the permission of the author!
 
+# A Short Summary
+
+This study covers the use of machine learning methods in predicting default in mortgage loans.
+Lending institutions can leverage machine learning methods to handle loan applications and
+prevent losses from defaulted loans. This thesis assesses the predictive performance of various
+machine learning methods using the Freddie Mac Single-Family Loan-Level Dataset, focusing
+on loans that originated in 2006 and 2007. 
+
+We employed widely used machine learning methods, including logistic regression, decision tree, random forest and XGBoost to predict defaults in mortgage loans together with under-sampling technique implemented to alleviate the impact of the imbalanced dataset
+problem. 
+
+We found that the XGBoost method combined with the under-sampling technique yielded the highest AUC (Area under the ROC Curve) score. 
+
+The important variables in the prediction of default obtained with help of XGBoost please look at the featureImportance.ipynb
+
 # Repository File Structure and Description 
 
 This repository contains the following key components:
@@ -40,7 +55,7 @@ Contained in this division are three distinct Jupyter notebooks that perform dif
 ```
 - dataModeling.ipynb: This notebook is utilized for exploratory data analysis (EDA) and initial modeling of the data.
 
-- algorithms.ipynb: This notebook implements machine learning models such as Linear Regression (LR) and XGBoost.
+- algorithms.ipynb: This notebook implements machine learning models such as Linear Regression, Decision Tree, Random Forest and XGBoost.
 
 - algorithmsTuning.ipynb: This notebook is focused on fine-tuning the hyperparameters of the models for optimal performance.
 
