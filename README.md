@@ -47,7 +47,7 @@ project-root
 ```
 
 ## Dataset Directory 
-This section includes both the original raw dataset and the segmented or split data files. Here's what each file represents:
+This section includes both the original raw dataset and  split data files. Here's what each file represents:
 
 ```
 - rawdata.csv: This original, unprocessed dataset.
@@ -59,7 +59,7 @@ This section includes both the original raw dataset and the segmented or split d
 ```
 
 ## Notebooks Directory
-Contained in this division are three distinct Jupyter notebooks that perform different aspects of data analysis:
+This section includes three distinct Jupyter notebooks that perform different aspects of data analysis:
 
 ```
 - dataModeling.ipynb: This notebook is utilized for exploratory data analysis (EDA) and initial modeling of the data.
@@ -108,5 +108,5 @@ Characteristics of the dataset:
 
 **Date**: 15.03.2024
 
-**Version**: Draft
+**Version**: 1.0
 
