@@ -22,6 +22,15 @@ The dataset was divided into a training set and a test set with 70% and 30% rati
 The models were trained only on the training set, and their performance was evaluated on the
 test set, which was an unseen dataset during the training process. 
 
+Based on the adopted definition of default, dataset consists of 37,769 defaulted loans, and suffers
+an imbalance dataset problem, with 6.00% defaulted ratios. The defaulted loans represent the minority class.
+
+Characteristics of the dataset:
+
+| #Samples | #Variables | #Default       | #Non-Default     |
+|----------|------------|----------------|------------------|
+| 629,544  | 17         | 37,769 (6.00%) | 591,775 (94.00%) |
+
 **Author**:Adnan Sevinc
 
 **Date**: 15.03.2024
