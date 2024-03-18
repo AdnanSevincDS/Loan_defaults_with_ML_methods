@@ -35,6 +35,8 @@ This section includes three distinct Jupyter notebooks that perform different as
 │   ├── from src.models import train_model has been tested.
 │   ├── from src.data import make_dataset  has been tested.
 │   ├── from src.tests import test_make_dataset has been tested.
+│   ├── from src.models import predict_model  has been tested.
+│   
 
 ```
 
