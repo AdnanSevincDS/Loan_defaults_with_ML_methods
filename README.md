@@ -32,9 +32,9 @@ This section includes three distinct Jupyter notebooks that perform different as
 ├── algorithms_tuning.ipynb: This notebook is focused on fine-tuning the hyperparameters of the models for optimal performance.
 
 ├── src_demo.ipynb: This notebook checks whether setup.py has been correctly set up.
-│   ├── from src.models import train_model has been tested.
-│   ├── from src.data import make_dataset  has been tested.
-│   ├── from src.tests import test_make_dataset has been tested.
+│   ├── from src.data import make_dataset has been tested.
+│   ├── from src.tests import test_make_dataset  has been tested.
+│   ├── from src.models import train_model  has been tested.
 │   ├── from src.models import predict_model  has been tested.
 │   
 
@@ -130,6 +130,6 @@ Characteristics of the dataset:
 
 **Author**:Adnan Sevinc
 
-**Date**: 15.03.2024
+**Date**: 18.03.2024
 
 **Version**: 1.0
