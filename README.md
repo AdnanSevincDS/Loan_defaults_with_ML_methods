@@ -21,6 +21,21 @@ We found that the XGBoost method combined with the under-sampling technique yiel
 | XGBoost             | 76.040                 | 76.339%             | n_estimators>[50,100, 200] max_depth> [3, 6,10] learning_rate> [0.05,0.1,0.5] subsample > [0.5,0.7,1] |
 
 
+## Notebooks Directory
+This section includes three distinct Jupyter notebooks that perform different aspects of data analysis:
+
+```
+- data_modeling.ipynb: This notebook is utilized for exploratory data analysis (EDA) and initial modeling of the data.
+
+- algorithms.ipynb: This notebook implements machine learning models such as Linear Regression, Decision Tree, Random Forest and XGBoost.
+
+- algorithms_tuning.ipynb: This notebook is focused on fine-tuning the hyperparameters of the models for optimal performance.
+
+- src_demo.ipynb: This notebook checks whether setup.py has been correctly set up.
+
+```
+
+Please navigate to each directory for a more detailed observation and understanding of how the project flows and functions.
 
 
 
