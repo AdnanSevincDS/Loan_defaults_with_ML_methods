@@ -25,13 +25,16 @@ We found that the XGBoost method combined with the under-sampling technique yiel
 This section includes three distinct Jupyter notebooks that perform different aspects of data analysis:
 
 ```
-- data_modeling.ipynb: This notebook is utilized for exploratory data analysis (EDA) and initial modeling of the data.
+├── data_modeling.ipynb: This notebook is utilized for exploratory data analysis (EDA) and initial modeling of the data.
 
-- algorithms.ipynb: This notebook implements machine learning models such as Linear Regression, Decision Tree, Random Forest and XGBoost.
+├── algorithms.ipynb: This notebook implements machine learning models such as Linear Regression, Decision Tree, Random Forest and XGBoost.
 
-- algorithms_tuning.ipynb: This notebook is focused on fine-tuning the hyperparameters of the models for optimal performance.
+├── algorithms_tuning.ipynb: This notebook is focused on fine-tuning the hyperparameters of the models for optimal performance.
 
-- src_demo.ipynb: This notebook checks whether setup.py has been correctly set up.
+├── src_demo.ipynb: This notebook checks whether setup.py has been correctly set up.
+│   ├── from src.models import train_model has been tested.
+│   ├── from src.data import make_dataset  has been tested.
+│   ├── from src.tests import test_make_dataset has been tested.
 
 ```
 
