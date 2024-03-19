@@ -15,22 +15,36 @@ We found that the XGBoost method combined with the under-sampling technique yiel
 
 | Model               | Without hyperparameter | with hyperparameter | Search for Hyperparameter                                                                             |
 |---------------------|------------------------|---------------------|-------------------------------------------------------------------------------------------------------|
-| Logistic Regression | 75.9007%               | 75.9007%            | c>[0.01, 0.1, 1, 10, 50] penalty>['none','l1','l2'] solver>['lbfgs', 'sag','saga','newton-cg']        |
-| Decision Tree       | 67.015%                | 73.551%             | criterion >['gini','entropy'] min_samples_split > [2,3,5,10] max_depth >[None,4, 5, 6, 8]             |
-| Random Forest       | 75.872%                | 75.958%             | n_estimators >[50,100, 200] max_depth >[None,4, 6, 8]                                                 |
-| XGBoost             | 76.040                 | 76.339%             | n_estimators>[50,100, 200] max_depth> [3, 6,10] learning_rate> [0.05,0.1,0.5] subsample > [0.5,0.7,1] |
+| XGBoost             | 76.040%                | 76.340%             | n_estimators>[50,100, 200] max_depth> [3, 6,10] learning_rate> [0.05,0.1,0.5] subsample > [0.5,0.7,1] |
+| Logistic Regression | 75.901%                | 75.901%             | c>[0.01, 0.1, 1, 10, 50] penalty>['none','l1','l2'] solver>['lbfgs', 'sag','saga','newton-cg']        |
+| Random Forest       | 75.873%                | 75.959%             | n_estimators >[50,100, 200] max_depth >[None,4, 6, 8]                                                 |
+| Decision Tree       | 67.016%                | 73.551%             | criterion >['gini','entropy'] min_samples_split > [2,3,5,10] max_depth >[None,4, 5, 6, 8]             |
 
+
+We found that the XGBoost method yielded the highest AUC (Area under the ROC Curve)
+score by employing the undersampling technique. Consequently, the conclusions of this study
+suggest that the XGBoost method, in conjunction with the undersampling technique, is superior
+in predicting mortgage loan defaults compared to the other methods examined in this study.
+Alternatively, the other methods employed could have been effective in predicting the mortgage
+default loans, except for the decision tree, as their performance is slightly different from each other. In
+addition to the predictive performance of the methods, transparency, and interpretability are
+significant factors for financial decision-makers when selecting a prediction method.
+Comprehending machine learning methods is typically more challenging compared to simple
+logistic regression methods. Although machine learning methods demonstrate superior
+performance, their opacity is a practical concern.
 
 ## Notebooks Directory
 This section includes three distinct Jupyter notebooks that perform different aspects of data analysis:
 
 ```
 ├── data_modeling.ipynb: This notebook is utilized for exploratory data analysis (EDA) and initial modeling of the data.
-
+│ 
 ├── algorithms.ipynb: This notebook implements machine learning models such as Linear Regression, Decision Tree, Random Forest and XGBoost.
-
+│ 
 ├── algorithms_tuning.ipynb: This notebook is focused on fine-tuning the hyperparameters of the models for optimal performance.
-
+│ 
+├── src_demo.ipynb: This notebook validates whether the src has been successfully built.
+│ 
 ├── src_demo.ipynb: This notebook checks whether setup.py has been correctly set up.
 │   ├── from src.data import make_dataset has been tested.
 │   ├── from src.tests import test_make_dataset  has been tested.
