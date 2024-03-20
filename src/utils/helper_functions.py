@@ -20,7 +20,7 @@ def numeric_data_summary_stats(df: pd.DataFrame, columns: List) -> pd.DataFrame:
     including count, min, max, mean, median, 25%-quant, 75%-quant, standard deviation and number of missing values.
     
     Parameters:
-    data (pd.DataFrame): Input DataFrame containing the data.
+    df (pd.DataFrame): Input DataFrame containing the data.
     columns (list): The list of columns in the DataFrame to be analyzed.
 
     Returns:
@@ -124,7 +124,7 @@ def cat_unique_values(df: pd.DataFrame) -> pd.DataFrame:
     
     return cat_unique_df
 
-def cat_encoding(df: pd.DataFrame) -> Tuple[list, List]:
+def cat_encoding(df: pd.DataFrame) -> Tuple[list[str], List[str]]:
     """
     Function that separates column names into two lists based on the number of unique values they have. 
     Columns with more than two unique values are determined for dummy encoding and those with two or fewer are for label encoding.
@@ -133,9 +133,9 @@ def cat_encoding(df: pd.DataFrame) -> Tuple[list, List]:
     df (pd.DataFrame): Input DataFrame on which the encoding method needs to be decided.
 
     Returns:
-    Tuple[list, List]:  Two lists.
-    The first list contains column names for columns to be dummy encoded.
-    The second list contains column names for columns to be label encoded.
+    Tuple[List[str], List[str]]:  Two lists.
+        The first list contains column names for columns to be dummy encoded.
+        The second list contains column names for columns to be label encoded.
     """
     cat_unique_df = cat_unique_values(df)
     get_dum = cat_unique_df[cat_unique_df["no_unique_values"] > 2]["variables"].to_list()
@@ -143,13 +143,13 @@ def cat_encoding(df: pd.DataFrame) -> Tuple[list, List]:
     
     return get_dum, label_encode
     
-def categorical_corr(df: pd.DataFrame, cat_cols: List) -> pd.DataFrame:
+def categorical_corr(df: pd.DataFrame, cat_cols: List[str]) -> pd.DataFrame:
     """
     Function that calculates pairwise correlation coefficients between all combinations of the categorical variables using Cramer's V method.
 
     Parameters:
     df (pd.DataFrame): Input DataFrame on which the pairwise correlation coefficients between categorical variables need to be calculated.
-    cat_cols (List): List of column names of the categorical variables.
+    cat_cols (List[str]): List of column names of the categorical variables.
 
     Returns:
     pd.DataFrame: A DataFrame containing pairs of categorical variables and their correlation coefficient.
@@ -193,9 +193,9 @@ def missing_values_table(df: pd.DataFrame) -> pd.DataFrame:
 
 def fill_missing_values(
     df: pd.DataFrame,
-    columns: List,
+    columns: List[str],
     imputation_strategy: str,
-    rounding=False
+    rounding: bool = False
 ) -> None:
     """
     Function that fills missing values in specified columns using a specified strategy. 
@@ -204,7 +204,7 @@ def fill_missing_values(
 
     Parameters:
     df (pd.DataFrame): Input DataFrame in which missing values will be filled.
-    columns (List): A list of columns in which missing values will be filled.
+    columns (List[str]): A list of columns in which missing values will be filled.
     imputation_strategy (str): The method to be used for imputation. 
                                Options are 'mean', 'median', 'mode' or 'zero'.
     rounding (bool): An optional argument that defaults to False. If True, the filling value will be rounded.
@@ -227,7 +227,7 @@ def fill_missing_values(
             
         df[col].fillna(filler, inplace=True)
 
-def split_variables(df: pd.DataFrame, target: str) -> Tuple[List, List, str]:
+def split_variables(df: pd.DataFrame, target: str) -> Tuple[Tuple[List[str], List[str], str]]:
     """
     Function that separates column names into three categories based on their types.
     The categories are categorical columns, numerical columns and the target column.
@@ -237,7 +237,7 @@ def split_variables(df: pd.DataFrame, target: str) -> Tuple[List, List, str]:
     target (str): The target column name.
 
     Returns:
-    List List, str: A tuple containing three elements.
+    Tuple[List[str], List[str], str]: A tuple containing three elements.
     The first element is a list of names of categorical columns.
     The second element is a list of names of numerical columns.
     The third element is the name of the target column.
@@ -284,10 +284,8 @@ def scale_and_prepare_data(
     y_test (pd.DataFrame): The test target data.
 
     Returns:
-    pd.DataFrame : The scaled training
-    pd.DataFrame: The scaled test
-    pd.DataFrame: The reshaped training target data
-    pd.DataFrame: The reshaped target data.
+    Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]
+        The scaled training and test feature data and the reshaped training and test target data.
     """
     scaler = StandardScaler()
 
@@ -359,10 +357,10 @@ def get_output(model, y_train: np.ndarray, X_train: np.ndarray, y_test: np.ndarr
 
     Parameters:
     model : The trained model for which the scores are to be calculated.
-    y_train : The true labels for the training data.
-    X_train : The training data.
-    y_test :  The true labels for the test data.
-    X_test : The test data.
+    y_train (array-like): The true labels for the training data.
+    X_train (array-like): The training data.
+    y_test (array-like):  The true labels for the test data.
+    X_test (array-like): The test data.
 
     Returns:
     pd.DataFrame: A DataFrame containing the training and test AUC-ROC and Gini scores.
@@ -383,10 +381,10 @@ def get_hyper_output(model, y_train: np.ndarray, X_train: np.ndarray, y_test: np
 
     Parameters:
     model : The trained model for which the scores are to be calculated.
-    y_train : The true labels for the training data.
-    X_train : The training data.
-    y_test : The true labels for the test data.
-    X_test : The test data.
+    y_train (array-like): The true labels for the training data.
+    X_train (array-like): The training data.
+    y_test (array-like): The true labels for the test data.
+    X_test (array-like): The test data.
 
     Returns:
     pd.DataFrame: A DataFrame containing the training and test AUC-ROC and Gini scores.
@@ -407,8 +405,8 @@ def class_report_and_cm(y_test: np.ndarray, pred: np.ndarray, model):
     and plots the confusion matrix for the predictions of a model.
 
     Parameters:
-    y_test : The true labels for the test data.
-    pred : The predicted labels for the test data.
+    y_test (array-like): The true labels for the test data.
+    pred (array-like): The predicted labels for the test data.
     model: The model that made the predictions.
 
     Returns:
