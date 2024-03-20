@@ -1,0 +1,7 @@
+.ipynb_checkpoints
+.DS_Store
+build
+dist
+notebooks/.ipynb_checkpoints
+notebooks/.DS_Store
+src.egg-info
